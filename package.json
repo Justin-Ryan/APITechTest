@@ -1,0 +1,19 @@
+{
+  "name": "api_tech_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "axios": "^0.26.1"
+  },
+  "devDependencies": {
+    "cucumber": "^7.0.0-rc.0"
+  }
+}
