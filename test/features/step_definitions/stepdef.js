@@ -8,11 +8,13 @@ let response = null;
 let numberOfRaces = 0;
 
 Given('I want to know the number of Formula One races in {int}', function (int) {
+  console.log("\nBegin Test Execution");
   year = int;
+  console.log("Year: " + year);
 });
 
-When('I retrieve the circuit list for that season', function () {
-  axios.get(`${BASE_URL}${year}`)
+ When('I retrieve the circuit list for that season', async function () {
+  await axios.get(`${BASE_URL}${year}`)
     .then(res => {
       response = res.data
     })
@@ -26,5 +28,6 @@ When('I retrieve the circuit list for that season', function () {
 });
 
 Then('there should be {int} circuits in the list returned', function (int) {
-  assert.equal(numberOfRaces,int);
+  assert.equal(int,numberOfRaces);
+  console.log("\nTest Passed!");
 });
